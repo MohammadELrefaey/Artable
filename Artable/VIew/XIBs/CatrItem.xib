@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CatrItem" id="2KR-md-fuZ" userLabel="Cart Item" customClass="CatrItem" customModule="Artable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2KR-md-fuZ" id="1vR-7L-VJ3">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xC7-wY-8On" customClass="RoundedShadowViews" customModule="Artable" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="484" height="184"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Slf-RI-gD5" customClass="RoundedImageViews" customModule="Artable" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="168" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Slf-RI-gD5" secondAttribute="height" multiplier="1:1" id="hu0-SU-7aM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jex-LA-rlr">
+                                <rect key="frame" x="196" y="81" width="94.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxk-67-K1Q">
+                                <rect key="frame" x="444" y="77" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="nS7-TJ-T3g"/>
+                                    <constraint firstAttribute="height" constant="30" id="qqf-yV-Cex"/>
+                                </constraints>
+                                <state key="normal" image="red_trash"/>
+                                <connections>
+                                    <action selector="deleteItemBtnTapped:" destination="2KR-md-fuZ" eventType="touchUpInside" id="HPj-hL-SrU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwd-Da-02G">
+                                <rect key="frame" x="300.5" y="81" width="58" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Slf-RI-gD5" secondAttribute="bottom" constant="8" id="3dN-i8-Uhb"/>
+                            <constraint firstItem="jex-LA-rlr" firstAttribute="centerY" secondItem="xC7-wY-8On" secondAttribute="centerY" id="E38-lc-qIC"/>
+                            <constraint firstItem="wwd-Da-02G" firstAttribute="centerY" secondItem="xC7-wY-8On" secondAttribute="centerY" id="afI-76-va1"/>
+                            <constraint firstItem="jex-LA-rlr" firstAttribute="leading" secondItem="Slf-RI-gD5" secondAttribute="trailing" constant="20" id="arQ-VG-dOD"/>
+                            <constraint firstItem="Slf-RI-gD5" firstAttribute="leading" secondItem="xC7-wY-8On" secondAttribute="leading" constant="8" id="cb5-aB-zyp"/>
+                            <constraint firstAttribute="trailing" secondItem="Xxk-67-K1Q" secondAttribute="trailing" constant="10" id="fYL-5c-OyL"/>
+                            <constraint firstItem="wwd-Da-02G" firstAttribute="leading" secondItem="jex-LA-rlr" secondAttribute="trailing" constant="10" id="lR8-rn-hfY"/>
+                            <constraint firstItem="Slf-RI-gD5" firstAttribute="top" secondItem="xC7-wY-8On" secondAttribute="top" constant="8" id="mmQ-JB-zDs"/>
+                            <constraint firstItem="Xxk-67-K1Q" firstAttribute="centerY" secondItem="xC7-wY-8On" secondAttribute="centerY" id="v8s-Yo-KeZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xC7-wY-8On" firstAttribute="leading" secondItem="1vR-7L-VJ3" secondAttribute="leading" constant="8" id="8Ag-6O-Bub"/>
+                    <constraint firstAttribute="bottom" secondItem="xC7-wY-8On" secondAttribute="bottom" constant="8" id="LIE-jW-3DA"/>
+                    <constraint firstAttribute="trailing" secondItem="xC7-wY-8On" secondAttribute="trailing" constant="8" id="lLw-oY-htR"/>
+                    <constraint firstItem="xC7-wY-8On" firstAttribute="top" secondItem="1vR-7L-VJ3" secondAttribute="top" constant="8" id="lWe-Xa-bEe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="iT4-s5-YG2"/>
+            <connections>
+                <outlet property="itemImg" destination="Slf-RI-gD5" id="ugE-ru-9OH"/>
+                <outlet property="itemPrice" destination="wwd-Da-02G" id="dJL-j5-KXY"/>
+                <outlet property="itemTitle" destination="jex-LA-rlr" id="gRq-lC-TNh"/>
+            </connections>
+            <point key="canvasLocation" x="48" y="62"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="red_trash" width="28" height="30"/>
+    </resources>
+</document>
